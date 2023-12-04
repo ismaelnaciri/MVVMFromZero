@@ -30,20 +30,20 @@ class UsersFragment : Fragment() {
             loginSuccessfull = true
         }
 
-        binding.viewContainer.setOnClickListener {
-            if (loginSuccessfull) {
-                viewModel.loginUser(LoginResult.user)
-                binding.userNameTV.text = viewModel.user
-                binding.userAgeTV.text = viewModel.age.toString()
-                binding.userEmailTV.text = viewModel.email
+        if (loginSuccessfull) {
+            viewModel.loginUser(LoginResult.user)
+            binding.userNameTV.text = viewModel.user
+            binding.userAgeTV.text = viewModel.age.toString()
+            binding.userEmailTV.text = viewModel.email
 
-                loginSuccessfull = false
-            } else {
-                viewModel.randomUser()
-                binding.userNameTV.text = viewModel.user
-                binding.userAgeTV.text = viewModel.age.toString()
-                binding.userEmailTV.text = viewModel.email
-            }
+            loginSuccessfull = false
+        }
+
+        binding.viewContainer.setOnClickListener {
+            viewModel.randomUser()
+            binding.userNameTV.text = viewModel.user
+            binding.userAgeTV.text = viewModel.age.toString()
+            binding.userEmailTV.text = viewModel.email
         }
 
         return binding.root

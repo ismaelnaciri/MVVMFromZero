@@ -5,7 +5,7 @@ import cat.insvidreres.inf.mvvmfromzero.loginFragment.LoginModel
 class UsersProvider {
     companion object {
         fun random(): UsersModel {
-            val position = (0..users.size).random()
+            val position = (0..<users.size).random()
             return users[position]
         }
 
