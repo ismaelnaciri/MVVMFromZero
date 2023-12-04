@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MVVMFromZero</string>
+    <!--  Login Fragment  -->
+    <string name="loginTV">Login</string>
+    <string name="userHint">User</string>
+    <string name="passwHint">Password</string>
+
+    <!--  Users Fragment  -->
+    <string name="userTV">userPlaceholder</string>
+    <string name="ageTV">agePlaceholder</string>
+    <string name="emailTV">emailPlaceholder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
